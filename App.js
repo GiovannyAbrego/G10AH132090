@@ -17,7 +17,7 @@ class PantallaInicio extends React.Component{
   };
   Entrar(){
     if(!!this.state.usuario && !!this.state.contrasena){
-      fetch('https://marketudb.000webhostapp.com/apiusuario.php?comando=autenticar &usuario='+this.state.usuario+'&contrasena='+this.state.contrasena, 
+      fetch('https://marketudb.000webhostapp.com/apiusuario.php?comando=autenticar&usuario='+this.state.usuario+'&contrasena='+this.state.contrasena, 
       { method: 'GET' })
       .then((response)=> response.json())
       .then((responseJson)=>{
@@ -67,7 +67,7 @@ class listarProductos extends React.Component{
   }
   cargarRegistros(){
     console.log('Prueba');
-    fetch('https://marketudb.000webhostapp.com/api.php?comando=listar',{method='GET'})
+    fetch('https://marketudb.000webhostapp.com/api.php?comando=listar',{method:'GET'})
     .then((response)=>response.json())
     .then((responseJson)=>{
       console.log(responseJson);
